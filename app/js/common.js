@@ -74,7 +74,7 @@ jQuery(document).ready(function($) {
 	});
 
 	// Mmenu
-	$('.dropdown-megamenu > .nav__link, .dropdown-megamenu > .carret, .dropdown > .nav__link, .dropdown > .carret').click(function() {
+	$('.dropdown-megamenu > .nav__link, .dropdown-megamenu > .caret, .dropdown > .nav__link, .dropdown > .caret').click(function() {
 		if($(this).parent().hasClass('open')) {
 			$(this).parent().removeClass('open');
 		}

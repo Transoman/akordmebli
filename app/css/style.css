@@ -1776,7 +1776,7 @@ section {
     text-transform: uppercase;
     font-weight: 700; }
 
-.carret {
+.caret {
   display: none; }
 
 @-webkit-keyframes fadeUp {
@@ -1878,11 +1878,11 @@ section {
       -ms-transform: rotate(-45deg);
       transform: rotate(-45deg); }
 
-.search-form__field {
+.search-form .form-field {
   position: relative;
   margin-bottom: 25px; }
 
-.search-form__input {
+.search-form .form-control {
   width: 100%;
   padding: 10px 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -1890,33 +1890,17 @@ section {
   font-weight: 100;
   color: #333;
   line-height: 1;
-  border: 0;
-  outline: none;
   text-transform: uppercase;
-  background-color: transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e53935), to(#e53935)), -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), to(#e3e3e3));
-  background-image: -webkit-linear-gradient(#e53935, #e53935), -webkit-linear-gradient(#e3e3e3, #e3e3e3);
-  background-image: -o-linear-gradient(#e53935, #e53935), -o-linear-gradient(#e3e3e3, #e3e3e3);
-  background-image: linear-gradient(#e53935, #e53935), linear-gradient(#e3e3e3, #e3e3e3);
-  background-position: center bottom;
-  -webkit-background-size: 0 1px, 100% 1px;
-  background-size: 0 1px, 100% 1px;
-  background-repeat: no-repeat;
-  -webkit-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease; }
-  .search-form__input:focus {
-    -webkit-background-size: 100% 1px;
-    background-size: 100% 1px; }
-  .search-form__input::-webkit-input-placeholder {
+  background-color: transparent; }
+  .search-form .form-control::-webkit-input-placeholder {
     color: #999; }
-  .search-form__input::-moz-placeholder {
+  .search-form .form-control::-moz-placeholder {
     color: #999; }
-  .search-form__input:-ms-input-placeholder {
+  .search-form .form-control:-ms-input-placeholder {
     color: #999; }
-  .search-form__input::-ms-input-placeholder {
+  .search-form .form-control::-ms-input-placeholder {
     color: #999; }
-  .search-form__input::placeholder {
+  .search-form .form-control::placeholder {
     color: #999; }
 
 .search-form__reset {
@@ -2217,7 +2201,9 @@ section {
 
 .feedback {
   position: relative;
-  background: #3d3935 url("../img/feedback-bg.jpg") no-repeat center;
+  background-image: url("../img/feedback-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
@@ -2966,12 +2952,12 @@ textarea {
     position: relative;
     margin-right: 0;
     margin-bottom: 10px; }
-    .nav__item .carret {
+    .nav__item .caret {
       position: absolute;
       top: 4px;
       right: 0;
       display: block; }
-    .nav__item .carret__icon {
+    .nav__item .caret__icon {
       width: 18px;
       height: 13px; }
     .nav__item.active .nav__link::after {
@@ -3050,4 +3036,6 @@ textarea {
   .footer__logo {
     margin-bottom: 20px; }
   .footer__contact {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .feedback {
+    background-image: url("../img/feedback-bg-tablet.jpg"); } }
