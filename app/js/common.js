@@ -1,5 +1,18 @@
 jQuery(document).ready(function($) {
 
+	// Sticky header
+	$('.header').removeClass('stuck');
+	$(window).scroll(function() {
+		if($(window).width() > 768) {
+			if($(this).scrollTop() > 100) {
+				$('.header').addClass('stuck');
+			}
+			else {
+				$('.header').removeClass('stuck');
+			}
+		}
+	});
+
 	// Header slider
 	$('.header-slider').owlCarousel({
 		items: 1,
@@ -35,11 +48,11 @@ jQuery(document).ready(function($) {
 	$('.fancybox').fancybox();
 
 	//
-	$('.order-metering-form__input, .order-metering-form__textarea').on('focus', function(e) {
+	$('.form-control').on('focus', function(e) {
 		$(this).parent().addClass('is-focused');
 	});
 
-	$('.order-metering-form__input, .order-metering-form__textarea').on('focusout', function() {
+	$('.order-metering-form__input, .order-metering-form__textarea, .form-control').on('focusout', function() {
 		if($(this).val() === '') {
 			$(this).parent().removeClass('is-focused');
 		}
@@ -52,10 +65,43 @@ jQuery(document).ready(function($) {
 	$('.nav-toggle').click(function(e) {
 		if($('.nav-toggle').hasClass('active')) {
 			$('.nav-toggle').removeClass('active');
+			$('.nav').removeClass('open');
 		}
 		else {
 			$('.nav-toggle').addClass('active');
+			$('.nav').addClass('open');
 		}
+	});
+
+	// Mmenu
+	$('.dropdown-megamenu > .nav__link, .dropdown-megamenu > .carret, .dropdown > .nav__link, .dropdown > .carret').click(function() {
+		if($(this).parent().hasClass('open')) {
+			$(this).parent().removeClass('open');
+		}
+		else {
+			$(this).parent().addClass('open');
+		}
+	});
+
+	// Одинакова висота колонок
+	$(function() {
+		$('.recommend-product__item').matchHeight();
+	});
+
+	// Top button
+	$(window).scroll(function() {
+		if($(this).scrollTop() > 1000) {
+			$(".top-btn").addClass('active');
+		}
+		else {
+			$(".top-btn").removeClass('active');
+		}
+	});
+	$(".top-btn").click(function () {
+		$("body, html").animate({
+			scrollTop: 0
+		}, 800);
+		return false;
 	});
 
 });

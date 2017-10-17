@@ -1,0 +1,33 @@
+.form-field
+	position: relative
+	margin-bottom: 30px
+	&.is-focused > .form-label
+		top: -15px
+		left: 0
+		font-size: 11px
+
+.form-label
+	position: absolute
+	top: 7px
+	left: 0
+	+transition
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea
+	width: 100%
+	padding: 7px 0
+	border: 0
+	outline: none
+	background-color: transparent
+	background-image: linear-gradient($accent, $accent), linear-gradient(#e3e3e3, #e3e3e3)
+	background-position: center bottom
+	background-size: 0 1px, 100% 1px
+	background-repeat: no-repeat
+	+transition
+	&:focus
+		background-size: 100% 1px
+
+textarea
+	resize: none

@@ -5,3 +5,31 @@
 	right: 0
 	padding: 30px 0
 	z-index: 10
+
+	&-wrapp
+		position: relative
+		display: flex
+		justify-content: flex-start
+		align-items: center
+
+.stuck
+	position: fixed
+	top: 0
+	padding: 15px 0
+	background-color: #fff
+	box-shadow: 0 0 10px rgba(#000, 0.2)
+	animation: slideDown 0.5s ease
+	.logo
+		color: $main-color
+	.nav__link
+		color: $main-color
+	.search__icon
+		fill: $main-color
+
+@keyframes slideDown
+	0%
+		opacity: 0
+		transform: translateY(-100%)
+	100%
+		opacity: 1
+		transform: translateY(0)

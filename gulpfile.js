@@ -23,7 +23,7 @@ gulp.task('browser-sync', function() {
 		server: {
 			baseDir: 'app'
 		},
-		// tunnel: 'sedona',
+		tunnel: 'akord',
 		notify: false
 	});
 });

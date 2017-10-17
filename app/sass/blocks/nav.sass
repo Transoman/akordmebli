@@ -1,9 +1,8 @@
 .nav
-	position: relative
+	// position: relative
 	&__list
 		margin: 0
 		padding: 0
-		margin-top: 5px
 		list-style-type: none
 		display: flex
 		justify-content: flex-end
@@ -12,6 +11,12 @@
 		margin-right: 30px
 		&:last-child
 			margin-right: 0
+		&.active
+			.nav__link
+				color: $accent
+				&::after
+					padding-top: 5px
+					border-color: $accent
 
 	&__link
 		display: block
@@ -38,11 +43,11 @@
 			color: $accent
 
 	&-toggle
-		position: absolute
-		left: 15px
+		display: none
 		width: 32px
 		height: 32px
 		margin: 0
+		margin-right: 20px
 		padding: 0
 		background: none
 		border: 0
@@ -71,7 +76,6 @@
 			height: 2px
 			width: 80%
 			background-color: $main-color
-			// +transition
 			+transition(all, 0)
 			&::before, &::after
 				content: ''
@@ -86,6 +90,7 @@
 			&::after
 				top: 7px
 				transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
 
 .dropdown
 	position: relative
@@ -110,12 +115,6 @@
 			&:last-child
 				border-bottom: 0
 
-	&-submenu
-		width: 24%
-		&:hover
-			> .dropdown-content
-				display: block
-
 	&-menu__link
 		display: block
 		padding: 10px 20px
@@ -124,37 +123,57 @@
 			background-color: #f8f7f7
 			color: $accent
 
-	&-content
-		position: absolute
-		top: 0
-		right: 0
-		width: 76%
-		padding: 11px 15px 0
-		background-color: #fff
-		display: none
-
-	&-content__item
-		animation: fadeUp 0.5s ease
-		img
-			margin-bottom: 15px
-
-	&-content__link
-		display: block
-		font-size: 12px
-		font-weight: 700
-		margin-bottom: 10px
-		color: #000
-		text-transform: uppercase
-		&:hover
-			color: $accent
+.dropdown-megamenu
+	&:hover
+		.megamenu
+			display: block
 
 .megamenu
-	position: static
-	.dropdown-menu
-		width: 100%
+	position: absolute
+	left: 0
+	top: calc(100% - 5px)
+	display: none
+	width: 100%
+	margin: 0
+	padding: 0
+	list-style-type: none
+	background-color: #fff
+	animation: fadeUp 0.4s ease
 
+	&__item
+		position: relative
+		display: table-cell
+		width: 25%
+		padding: 25px
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			right: 100%
+			bottom: 0
+			width: 1px
+			background-color: $gray-lighten
 
+		& > ul
+			margin: 0
+			padding: 10px
+			list-style-type: none
 
+			li
+				margin-bottom: 10px
+
+			a
+				color: $main-color
+				&:hover
+					color: $accent
+
+	&__head
+		margin: 0
+		text-transform: uppercase
+		font-weight: 700
+
+.carret
+	display: none
 
 @keyframes fadeUp
 	0%

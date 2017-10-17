@@ -14,8 +14,13 @@
 	.catalog .section-header
 		margin-bottom: 40px
 
+	.header-wrapp
+		flex-direction: column
+		justify-content: center
+
 	.logo-wrapp
 		text-align: center
+		margin: 0
 		margin-bottom: 20px
 
 	.nav__list
@@ -24,7 +29,7 @@
 
 	.search
 		position: absolute
-		top: -34px
+		top: 6px
 		right: 15px
 
 	.special__item
@@ -47,35 +52,60 @@
 		right: 0
 		padding: 10px 0
 		background-color: #fff
+		box-shadow: 0 0 10px rgba(#000, 0.2)
+
+	.header-wrapp
+		flex-direction: row
+		justify-content: flex-start
 
 	.logo-wrapp
 		text-align: left
 		margin: 0
-		padding-top: 3px
+		margin-right: auto
 
 	.logo
 		font-size: 18px
 		color: $main-color
 
+	.nav-toggle
+		display: block
+
 	.nav
 		position: fixed
-		top: 0
+		top: 52px
 		left: 0
 		width: 250px
 		height: 100%
 		background-color: #fff
 		overflow-y: auto
 		overflow-x: hidden
-		// display: none
+		background-color: #f5f5f5
+		transform: translateX(-100%)
+		+transition
+		&.open
+			transform: translateX(0)
 	.nav__list
 		flex-direction: column
-		padding: 50px 15px 15px
+		padding: 30px 15px 15px
 
 	.nav__item
+		position: relative
 		margin-right: 0
 		margin-bottom: 10px
+		.carret
+			position: absolute
+			top: 4px
+			right: 0
+			display: block
+		.carret__icon
+			width: 18px
+			height: 13px
+		&.active
+			.nav__link::after
+				display: none
 
 	.nav__link
+		padding: 0
 		font-size: 16px
 		color: $main-color
 		text-transform: none
@@ -83,39 +113,123 @@
 			content: ''
 			border: none
 
-	.dropdown-menu
-		position: static
+	.dropdown-megamenu:hover .megamenu, .dropdown:hover .dropdown-menu
+		display: none
+
+	.dropdown-megamenu
+		&.open
+			.megamenu
+				display: block
+				animation: none
+			& > .nav__link
+				color: $accent
+
+	.dropdown
+		&.open
+			.dropdown-menu
+				display: block
+				animation: none
+			& > .nav__link
+				color: $accent
 
 	.megamenu
-		li
-			width: auto
-			border-bottom: 0
-			& > .dropdown-content
-				position: static
-				display: block
-				width: auto
-				padding: 0 15px 0 20px
-				img
-					display: none
-				a
-					text-transform: none
-					font-weight: 400
-					font-size: 14px
-			& > a
-				padding-left: 10px
-				font-weight: 700
+		position: static
+		background-color: transparent
+
+	.megamenu__item
+		display: block
+		width: auto
+		padding: 20px 15px 0
+		& > ul
+			padding-bottom: 0
+
+	.megamenu__head
+		text-transform: none
+
+	.dropdown-menu
+		position: static
+		background: transparent
+		width: auto
+		a
+			padding: 5px 0 5px 25px
 
 	.search
 		position: static
+		margin: 0
 
 	.search__icon
 		fill: $main-color
 
+	.search-wrapp__close
+		right: 15px
+		top: 15px
+
+	.slider__item
+		min-height: 400px
+		padding-top: 200px
+
+	.slider__header
+		font-size: 38px
+		margin-bottom: 50px
+
+	.features
+		padding-bottom: 10px
+
+	.features__item
+			margin-bottom: 30px
+
+	.features__number
+		font-size: 48px
+
+	.recommend-product
+		padding-bottom: 20px
+
+	.recommend-product__item
+		margin-bottom: 30px
+
+	.recommend-product__img-wrapp
+		text-align: center
+
+	.catalog
+		padding-bottom: 20px
+
+	.catalog__item
+		margin-bottom: 30px
+
+	.social
+		text-align: center
+
+	.footer__logo
+		margin-bottom: 20px
+
+	.footer__contact
+		margin-bottom: 30px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.catalog__icon-wrapp
+		padding-top: 70px
 
+	.catalog__icon
+		height: 50px
+
+	.why-we
+		padding-bottom: 20px
+
+	.why-we__icon
+		height: 40px
+
+	.why-we__icon--rule
+		width: 59px
+
+	.why-we__icon--factory
+		width: 43px
+
+	.why-we__icon--quality
+		width: 33px
+
+	.search-form__input
+		font-size: 32px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

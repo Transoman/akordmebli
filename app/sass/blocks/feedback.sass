@@ -1,0 +1,21 @@
+.feedback
+	position: relative
+	background: #3d3935 url('../img/feedback-bg.jpg') no-repeat center
+	background-size: cover
+	background-attachment: fixed
+	overflow: hidden
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background: rgba(#000, 0.5)
+
+	& > .container
+		position: relative
+		z-index: 1
+
+	.section-header
+		color: #fff
