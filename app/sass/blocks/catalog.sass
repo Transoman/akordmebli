@@ -1,0 +1,51 @@
+.catalog
+
+	.section-header
+		margin-bottom: 60px
+
+	&__item
+		text-align: center
+
+	&__link
+		&:hover
+			.catalog__title
+				color: $accent
+			.catalog__icon
+				fill: $accent
+
+	&__icon-wrapp
+		position: relative
+		display: block
+		padding-top: 90px
+
+	&__icon
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		height: 70px
+		width: 124px
+		fill: $main-color
+		+transition
+
+	&__icon--kitchen
+		top: 4px
+
+	&__icon--bedroom
+		width: 100px
+		top: 4px
+
+	&__icon--livingroom
+		height: 75px
+		width: 76px
+
+	&__icon--furniture
+		width: 97px
+		height: 60px
+		top: 13px
+
+	&__title
+		margin: 0
+		color: #000
+		text-transform: uppercase
+		+transition
