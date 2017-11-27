@@ -1,0 +1,118 @@
+.woocommerce-Reviews-title
+	margin: 0 0 30px
+	font-weight: 400
+	text-transform: uppercase
+	span
+		color: $gray
+
+.commentlist
+	margin: 0
+	padding: 0
+	margin-bottom: 50px
+	list-style-type: none
+	> li
+		border-top: 1px solid $gray-lighten
+		&:first-child
+			border: none
+	.comment_container
+		display: flex
+		align-items: flex-start
+		padding-top: 20px
+	.avatar
+		flex-shrink: 0
+		border-radius: 50%
+	.comment-text
+		margin-left: 30px
+
+	.children
+		margin: 0
+		padding: 0
+		list-style-type: none
+		li
+			margin-bottom: 20px
+			border-top: 1px solid $gray-lighten
+		.comment_container
+			padding: 20px 0 0 30px
+
+
+.comment-reply-title
+	display: block
+	margin-bottom: 30px
+	font-size: 18px
+
+.stars
+	margin: 0
+	margin-left: 10px
+	display: inline-block
+	vertical-align: middle
+	color: $orange
+	&:hover
+		a
+			color: $orange
+	&.selected
+		a
+			color: $orange
+	a
+		position: relative
+		text-indent: -9999px
+		display: inline-block
+		width: 17px
+		height: 17px
+		color: $gray-light
+		&::before
+			content: '\e905'
+			position: absolute
+			top: 0
+			right: 0
+			display: block
+			width: 17px
+			height: 17px
+			font-family: 'iconmoon'
+			font-size: 14px
+			text-indent: 0
+			line-height: 1
+		&:hover
+			color: $orange
+			~ a::before
+				color: $gray-light
+		&.active
+			~ a
+				color: $gray-light
+
+.star-rating
+	position: relative
+	overflow: hidden
+	height: 1em
+	width: 5.4em
+	line-height: 1
+	font-size: 1em
+	font-family: 'iconmoon'
+	&::before
+		content: '\e905\e905\e905\e905\e905'
+		position: absolute
+		top: 0
+		left: 0
+		color: $gray-light
+	span
+		overflow: hidden
+		position: absolute
+		top: 0
+		left: 0
+		padding-top: 1.5em
+		&::before
+			content: '\e905\e905\e905\e905\e905'
+			color: $orange
+			position: absolute
+			top: 0
+			left: 0
+
+.comment-form
+	.required
+		font-size: 16px
+		color: $accent
+	label
+		color: $gray
+		text-transform: uppercase
+
+.submit
+	@extend .btn

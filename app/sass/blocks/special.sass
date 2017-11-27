@@ -1,0 +1,26 @@
+.special
+	a
+		display: block
+		overflow: hidden
+
+	&__item-wrapp
+		margin-bottom: 20px
+
+	&__item
+		position: relative
+		+transition
+		&:hover
+			transform: scale(1.1)
+			&::after
+				opacity: 1
+
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			opacity: 0
+			background-color: rgba(#000, .4)
+			+transition

@@ -1,0 +1,161 @@
+/* Common styles */
+html, body
+	height: 100%
+
+body
+	min-width: 320px
+	font-family: $main-font
+	font-size: 14px
+	line-height: 1.6
+	color: $main-color
+	opacity: 1
+
+table
+	width: 100%
+	td, th
+		border: 1px solid #000
+		padding: 5px 10px
+
+.home
+	.header
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		padding: 30px 0
+		box-shadow: none
+
+	.logo
+		color: #fff
+
+	.nav__link
+		color: #fff
+
+	.header-search__icon
+		fill: #fff
+		&:hover
+			fill: $accent
+
+	.stuck
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+		padding: 15px 0
+		box-shadow: 0 0 10px rgba(#000, 0.1)
+
+img
+	max-width: 100%
+	height: auto
+
+a
+	+transition
+	color: $accent
+
+a:hover, a:focus, a:active
+	text-decoration: none
+	outline: none
+	color: $main-color
+
+/* Hidden element */
+.visually-hidden
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	padding: 0
+	border: 0
+	clip: rect(0 0 0 0)
+	overflow: hidden
+
+/* Buttons */
+.btn
+	display: inline-block
+	vertical-align: middle
+	padding: 10px 15px
+	font-family: $main-font
+	font-size: 16px
+	font-weight: 700
+	color: #fff
+	text-align: center
+	background-color: $accent
+	border: 0
+	outline: none
+	text-decoration: none
+	cursor: pointer
+	user-select: none
+	transition: all .25s ease
+	text-transform: uppercase
+	&:hover
+		background-color: lighten($accent, 5%)
+		color: #fff
+	&:active
+		background-color: darken($accent, 5%)
+		color: rgba(255,255,255,.3)
+	&:focus
+		background-color: darken($accent, 5%)
+		color: rgba(255,255,255,.3)
+	&[disabled]
+		background-color: #e5e5e5
+		cursor: not-allowed
+		color: #fff
+
+
+.section
+	padding: 80px 0 110px
+
+.section-bg
+	background: $gray-lighten
+
+.section-header
+	margin: 0
+	margin-bottom: 40px
+	font-weight: 700
+	font-size: 24px
+	color: #000
+	text-align: center
+	text-transform: uppercase
+
+
+.top-btn
+	position: fixed
+	right: 40px
+	bottom: 40px
+	width: 50px
+	height: 50px
+	line-height: 55px
+	text-align: center
+	background-color: #ccc
+	z-index: 10
+	cursor: pointer
+	border-radius: 50%
+	box-shadow: 0px 0px 5px rgba(#000, 0.1)
+	transform: translateY(100px)
+	+transition
+	&.active
+		transform: translateY(0)
+	&:hover
+		background-color: $accent
+
+.top__icon
+	width: 20px
+	height: 20px
+	fill: #fff
+	transform: rotate(180deg)
+
+
+.alignleft
+	display: inline
+	float: left
+	margin-right: 1.5em
+
+.alignright
+	display: inline
+	float: right
+	margin-left: 1.5em
+
+.aligncenter
+	clear: both
+	display: block
+	margin-left: auto
+	margin-right: auto

@@ -1,0 +1,398 @@
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+
+	.section
+		padding: 50px 0
+
+	.catalog .section-header
+		margin-bottom: 40px
+
+	.header-wrapp
+		flex-direction: column
+		justify-content: center
+
+	.logo-wrapp
+		text-align: center
+		margin: 0
+		margin-bottom: 20px
+
+	.nav__list
+		margin: 0
+		justify-content: center
+
+	.header-search
+		position: absolute
+		top: 6px
+		right: 15px
+
+	.special__item
+		margin-bottom: 20px
+
+	.why-we__item
+		margin-bottom: 40px
+
+	.footer
+		padding: 45px 0 30px
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.home .header, .header
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		padding: 10px 0
+		background-color: #fff
+		box-shadow: 0 0 10px rgba(#000, 0.2)
+
+	.header-wrapp
+		flex-direction: row
+		justify-content: flex-start
+
+	.logo-wrapp
+		text-align: left
+		margin: 0
+		margin-right: auto
+
+	.home .logo
+		font-size: 18px
+		color: $main-color
+
+	.nav-toggle
+		display: block
+
+	.nav
+		position: fixed
+		top: 52px
+		left: 0
+		width: 250px
+		height: 100%
+		background-color: #fff
+		overflow-y: auto
+		overflow-x: hidden
+		background-color: #f5f5f5
+		transform: translateX(-100%)
+		+transition
+		&.open
+			transform: translateX(0)
+	.nav__list
+		flex-direction: column
+		padding: 30px 15px 15px
+
+	.nav__item
+		position: relative
+		margin-right: 0
+		margin-bottom: 10px
+		.caret
+			position: absolute
+			top: 4px
+			right: 0
+			display: block
+		.caret__icon
+			width: 18px
+			height: 13px
+		&.active
+			.nav__link::after
+				display: none
+
+	.home .nav__link
+		color: $main-color
+
+	.nav__link
+		padding: 0
+		font-size: 16px
+		color: $main-color
+		text-transform: none
+		&::after
+			content: ''
+			border: none
+
+	.dropdown-megamenu:hover .dropdown-menu, .dropdown:hover .dropdown-menu
+		display: none
+
+	.dropdown-megamenu
+		&.open
+			.dropdown-menu
+				position: static
+				display: block
+				width: auto
+				background: none
+				animation: none
+				& > li
+					display: block
+					width: auto
+					padding: 20px 15px 0
+					color: $accent
+					& > a
+						text-transform: none
+					& > ul
+						padding: 10px 10px 0
+						& > li
+							padding: 0
+							margin-bottom: 10px
+
+	.dropdown
+		&.open
+			.dropdown-menu
+				position: static
+				display: block
+				padding: 10px 10px 0 30px
+				background: transparent
+				animation: none
+				& > li
+					margin-bottom: 10px
+					& > a
+						padding: 0
+
+	.header-search
+		position: static
+		margin: 0
+
+	.header-search__btn .header-search__icon
+		fill: $main-color
+
+	.search-wrapp__close
+		right: 15px
+		top: 15px
+
+	.slider__item
+		min-height: 400px
+
+	.slider__content
+		h2
+			font-size: 28px
+			margin-bottom: 20px
+		p
+			font-size: 16px
+
+	.features
+		padding-bottom: 10px
+
+	.features__item
+			margin-bottom: 30px
+
+	.features__number
+		font-size: 48px
+
+	.recommend-product
+		padding-bottom: 20px
+
+	.recommend-product__item
+		margin-bottom: 30px
+
+	.recommend-product__img-wrapp
+		text-align: center
+
+	.catalog
+		padding-bottom: 20px
+
+	.catalog__item
+		margin-bottom: 30px
+
+	.social
+		text-align: center
+
+	.footer__logo
+		margin-bottom: 20px
+		.logo
+			color: #fff
+
+
+	.footer__contact
+		margin-bottom: 30px
+
+	.feedback
+		background-image: url("../img/feedback-bg-tablet.jpg")
+
+	.article__item
+		flex-direction: column
+
+	.article__col-left
+		margin: 0 0 20px 0
+		display: flex
+		align-items: center
+
+	.article__date-wrapp
+		margin: 0 20px 0 0
+
+	.share-list
+		display: flex
+		justify-content: flex-start
+	.share-list__item
+		margin-right: 20px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.catalog__icon-wrapp
+		padding-top: 70px
+
+	.catalog__icon
+		height: 50px
+
+	.why-we
+		padding-bottom: 20px
+
+	.why-we__icon
+		height: 40px
+
+	.why-we__icon--rule
+		width: 59px
+
+	.why-we__icon--factory
+		width: 43px
+
+	.why-we__icon--quality
+		width: 33px
+
+	.search-form .form-control
+		font-size: 25px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	.top-btn
+		right: 20px
+		bottom: 20px
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	.breadcrumbs-list
+		margin-bottom: 0
+
+	// .products-top-panel
+	// 	flex-direction: column
+	// 	margin-bottom: 20px
+
+	// .woocommerce-result-count
+	// 	order: 1
+
+	// .woocommerce-ordering
+	// 	margin-bottom: 15px
+
+	.products
+		margin-bottom: 30px
+
+	.product
+		text-align: center
+
+	.star-rating
+		margin: 0 auto
+
+	.price
+		justify-content: center
+
+	.single-images-thumbnails
+		margin-bottom: 35px
+
+	.single-product
+		.product
+			text-align: left
+		.price
+			justify-content: flex-start
+		.star-rating
+			margin: 0
+	.variations_button
+		flex-direction: column
+		margin-bottom: 30px
+	.quantity
+		margin-bottom: 15px
+	.social-product
+		justify-content: center
+	.wc-tabs
+		flex-direction: column
+		li
+			margin: 0
+			text-align: center
+			a
+				padding-top: 15px
+
+	.woocommerce-tabs
+		margin-top: 40px
+
+	.related
+		.product
+			text-align: center
+			.price
+				justify-content: center
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	.images-slider img
+		margin: 0 auto
+
+	.single_add_to_cart_button
+		max-width: 150px
+
+	// .single-images-thumbnails
+	// 	display: block
+	// 	margin-bottom: 30px
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	// .woocommerce-result-count
+	// 	order: 0
+
+	.product
+		text-align: left
+
+	.star-rating
+		margin: 0
+
+	.price
+		justify-content: flex-start
+
+	.related
+		.product
+			text-align: left
+			.price
+				justify-content: flex-start
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	.products
+		margin-bottom: 80px
+
+	.product
+		text-align: left
+
+	.star-rating
+		margin: 0
+
+	.price
+		justify-content: flex-start
+
+	.variations_button
+		flex-direction: row
+
+	.single_add_to_cart_button
+		max-width: none
+
+	.quantity
+		margin-bottom: 0
+
+	.social-product
+		justify-content: flex-start
+
+	.wc-tabs
+		flex-direction: row
+		li
+			margin-right: 50px
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

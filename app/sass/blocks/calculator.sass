@@ -1,0 +1,65 @@
+.calculator-link
+	font-size: 16px
+	color: #333
+	border-bottom: 1px dotted
+	cursor: pointer
+	text-transform: uppercase
+	&:hover
+		color: $accent
+
+.calculator-wrapp
+	display: none
+	padding-top: 10px
+	padding-bottom: 20px
+	margin-bottom: 40px
+	background-color: #f6f6f6
+
+.calculator-header
+	margin-bottom: 40px
+	font-size: 18px
+	color: #333
+	text-align: center
+	text-transform: uppercase
+
+.form-kitchen__field
+	position: relative
+	margin-bottom: 25px
+	br
+		display: none
+
+.form-kitchen__label
+	display: block
+	font-size: 14px
+	font-weight: 400
+
+.kitchen-result
+	display: none
+	border-top: 1px solid #ddd
+	padding: 20px 0 0
+	font-size: 16px
+	font-weight: 700
+
+.submit
+	display: block
+	margin: 0 auto
+	padding: 10px 20px
+	border: 2px solid $main-color
+	text-transform: uppercase
+	font-weight: 700
+	color: $main-color
+	background: none
+	&:hover
+		background: none
+		color: $accent
+		border-color: $accent
+	&:focus
+		background: none
+		color: $accent
+		border-color: $accent
+
+.kitchen-err
+	position: absolute
+	font-size: 12px
+	top: 101%
+	color: tomato
+	display: none

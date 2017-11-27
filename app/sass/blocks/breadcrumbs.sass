@@ -1,0 +1,31 @@
+.breadcrumbs
+	padding: 80px 0 40px
+	.section-header
+		margin: 0
+
+
+.breadcrumbs-list
+	margin: 40px 0
+	padding: 0
+	list-style-type: none
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+
+	&__item
+		position: relative
+		&:last-child::after
+			display: none
+		&::after
+			content: '/'
+			display: inline-block
+			color: $gray
+			margin: 0 15px
+		&--active
+			color: $gray
+
+	&__link
+		color: $accent
+		+transition
+		&:hover
+			color: $main-color

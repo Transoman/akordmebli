@@ -1,0 +1,130 @@
+.header-search
+	text-align: right
+	margin-left: 50px
+
+	&__btn
+		&:hover
+			.search__icon
+				fill: $accent
+	&__icon
+		width: 22px
+		height: 22px
+		fill: $main-color
+		+transition
+
+.search-wrapp
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background-color: #fff
+	display: flex
+	align-items: center
+	z-index: 9999
+	opacity: 0
+	visibility: hidden
+	transform: translateY(-100%)
+	+transition
+	&.open
+		opacity: 1
+		visibility: visible
+		transform: translateY(0)
+
+	&__close
+		position: absolute
+		right: 62px
+		top: 38px
+		width: 20px
+		height: 20px
+		padding: 0
+		margin: 0
+		background: none
+		border: 0
+		outline: none
+		border-radius: 50%
+		font-size: 0
+		cursor: pointer
+		&:hover
+			&::before, &::after
+				background-color: #000
+		&::before, &::after
+			content: ''
+			position: absolute
+			left: 0
+			display: block
+			width: 20px
+			height: 2px
+			background-color: $gray
+			transform: rotate(45deg)
+			+transition
+		&::after
+			transform: rotate(-45deg)
+
+.search-form
+
+	.form-field
+		position: relative
+		margin-bottom: 25px
+
+	.form-control
+		padding: 10px 45px 10px 0
+		font-family: $second-font
+		font-size: 48px
+		font-weight: 100
+		color: $main-color
+		line-height: 1
+		text-transform: uppercase
+		&::placeholder
+			color: $gray
+
+	&__reset
+		position: absolute
+		right: 0
+		top: 50%
+		width: 32px
+		height: 32px
+		padding: 0
+		margin: 0
+		margin-top: -16px
+		background: none
+		border: 0
+		outline: none
+		font-size: 0
+		cursor: pointer
+		&:hover
+			&::before, &::after
+				background-color: #000
+		&::before, &::after
+			content: ''
+			position: relative
+			left: 0
+			top: 0
+			display: block
+			width: 32px
+			height: 1px
+			background-color: $gray
+			transform: rotate(45deg)
+			+transition
+		&::after
+			transform: rotate(-45deg)
+
+
+.search-list
+	&__item
+		display: flex
+		align-items: center
+		margin-bottom: 30px
+		padding-bottom: 15px
+		border-bottom: 1px solid #e6e6e6
+		&:last-child
+			border: 0
+		.entry-footer
+			flex-shrink: 0
+			margin-left: 25px
+	&__content
+		flex-grow: 1
+
+.no-results
+	text-align: center
+	margin-bottom: 110px

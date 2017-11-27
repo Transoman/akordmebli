@@ -1,0 +1,213 @@
+.tm-wc-ajax-products-wrapper
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	align-content: flex-start
+	margin-bottom: 50px
+
+	.tm-wc-ajax-filters-wrapper
+		flex: 1 1 100%
+		margin-bottom: 25px
+		> span
+			padding: 5px 10px
+			margin-bottom: 0
+			font-size: 12px
+			border-radius: 0
+			color: $accent
+			background: $gray-lighten
+			+transition
+			&:hover
+				background: $accent
+				color: #fff
+				.tm-wc-ajax-filters-dismiss
+					color: #fff
+		.tm-wc-ajax-filters-dismiss
+			color: $accent
+			vertical-align: middle
+			font-size: 13px
+			margin-right: 0
+			margin-left: 5px
+			+transition
+
+		a.button.tm-wc-ajax-filters-reset
+			padding: 5px 10px
+			margin: 0
+			background: $accent
+			color: #fff
+			border-radius: 0
+			+transition
+			&:hover
+				background: $gray
+
+.tm-wc-ajax-filters-loader
+	svg
+		circle:last-child
+			stroke: $accent
+
+.tm-wc-ajax-filters-dismiss
+	.dashicons-dismiss
+		display: none
+	&::after
+		content: '\e906'
+		font-family: 'iconmoon'
+
+.tm-wc-ajax-filters-reset
+	float: right
+
+.woocommerce-result-count
+	margin: 10px 0 0
+	flex: 1
+
+.woocommerce-ordering
+	position: relative
+	margin-bottom: 30px
+
+.orderby
+	color: $gray
+	// appearance: none
+	// &::-ms-expand
+	// 	display: none
+
+.tm-wc-ajax-load-more-button
+	margin: 0 auto
+
+.product
+	margin-bottom: 25px
+
+.woocommerce-loop-product__link
+	display: flex
+	flex-direction: column
+	height: 100%
+	&:hover
+		.woocommerce-loop-product__title
+			color: $accent
+	.star-rating
+		margin-bottom: 15px
+	img
+		display: block
+		margin: 0 auto
+
+.woocommerce-loop-product__title
+	margin: 25px 0 15px
+	font-size: 16px
+	text-transform: uppercase
+	color: #000
+	+transition
+
+.price
+	display: flex
+	align-items: flex-end
+	margin-top: auto
+	line-height: 1
+	font-size: 16px
+	font-weight: 700
+	color: #666
+	text-decoration: none
+	del
+		order: 2
+		margin-left: 15px
+		font-size: 14px
+		font-weight: 400
+		color: $gray-light
+	ins
+		text-decoration: none
+
+.add_to_cart_button
+	display: block
+	margin-top: 20px
+	color: $main-color
+	text-transform: uppercase
+
+
+// Ribbon
+.onsale
+	position: absolute
+	top: 10px
+	left: 25px
+	padding: 5px 10px
+	background-color: $accent
+	font-family: $second-font
+	font-weight: 100
+	font-size: 11px
+	letter-spacing: 0.8px
+	color: #fff
+	text-transform: uppercase
+	z-index: 10
+
+.single-product
+	.price
+		font-size: 20px
+
+.woocommerce-product-rating
+	display: flex
+	align-items: center
+	margin-bottom: 15px
+	.woocommerce-review-link
+		margin-left: 10px
+		color: $gray
+
+.variations
+	width: 100%
+	margin-bottom: 25px
+	td
+		border: 0
+	.label
+		font-size: 12px
+		color: $gray
+		text-transform: uppercase
+	.value
+		select
+			max-width: 100%
+			width: 75%
+			margin-right: 15px
+	.reset_variations
+		color: $gray
+		&:hover
+			color: $main-color
+
+.woocommerce-variation.single_variation
+	margin-bottom: 25px
+
+.variations_button,
+.add-cart-wrapp
+	display: flex
+	margin-bottom: 50px
+
+.quantity
+	width: 50px
+	margin-right: 20px
+
+.single_add_to_cart_button
+	background: #00b06c
+	font-size: 14px
+	&:hover
+		background: lighten(#00b06c, 5%)
+	&:active
+		background: darken(#00b06c, 5%)
+	&:focus
+		background: #00b06c
+
+.product_meta
+	padding-bottom: 30px
+	border-bottom: 1px solid $gray-lighten
+	> span
+		display: block
+		color: $gray
+		padding: 5px 0
+		text-transform: uppercase
+
+.sku_wrapper span
+	text-transform: none
+	color: $main-color
+
+.posted_in a
+	color: $accent
+	text-transform: none
+	&:hover
+		color: $main-color
+
+.call-to-buy
+	margin-bottom: 20px
+
+.related
+	clear: both

@@ -1,0 +1,45 @@
+.feedback-form
+	color: #fff
+	font-size: 16px
+
+	.form-label
+		color: #fff
+
+	&__textarea
+		height: 150px
+
+	&__btn
+		border: 2px solid #fff
+		background: transparent
+		font-size: 14px
+		padding-right: 50px
+		padding-left: 50px
+		margin: 0 auto
+		display: block
+		&:hover
+			background: #fff
+			color: $main-color
+		&:focus
+			background: #fff
+			color: $main-color
+
+	.g-recaptcha
+		margin-bottom: 20px
+		> div
+			margin: 0 auto
+
+	&__msg
+		color: #fff
+		.err
+			margin-bottom: 20px
+
+.page-template-default
+	.feedback-form
+		color: $main-color
+		.form-label
+			color: $main-color
+		.btn
+			display: block
+			margin: 0 auto
+		.feedback-form__msg
+			color: $main-color

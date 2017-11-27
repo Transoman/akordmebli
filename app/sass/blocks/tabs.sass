@@ -1,0 +1,49 @@
+.woocommerce-tabs
+	margin-top: 110px
+	margin-bottom: 110px
+
+.wc-tabs
+	margin: 0
+	padding: 0
+	margin-bottom: 25px
+	list-style-type: none
+	display: flex
+	border-bottom: 1px solid $gray-lighten
+	li
+		margin-right: 50px
+		&.active
+			a
+				color: $accent
+				&::after
+					width: 100%
+		a
+			position: relative
+			display: block
+			padding-bottom: 10px
+			font-weight: 700
+			color: #000
+			text-transform: uppercase
+			&::after
+				content: ''
+				position: absolute
+				top: 100%
+				left: 0
+				width: 0
+				border-bottom: 1px solid $accent
+				+transition
+			&:hover
+				color: $accent
+				&::after
+					width: 100%
+
+
+.shop_attributes
+	width: 100%
+	tr:nth-child(2n)
+		background-color: $gray-lighten
+	th
+		padding: 15px 0 15px 15px
+		text-align: left
+		border: 0
+	td
+		border: 0

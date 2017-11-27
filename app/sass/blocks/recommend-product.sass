@@ -1,0 +1,44 @@
+.recommend-product
+
+	&__link
+		display: flex
+		flex-direction: column
+		height: 100%
+		&:hover, &:focus
+			.recommend-product__title
+				color: $accent
+
+	&__img-wrapp
+		margin-bottom: 20px
+
+	&__content
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		height: 100%
+
+	&__title
+		margin: 0
+		margin-bottom: 10px
+		font-weight: 700
+		color: #000
+		text-transform: uppercase
+		+transition
+
+	&__descr
+		margin: 0
+		margin-bottom: 25px
+		color: $gray
+
+	&__price-wrapp
+		margin-top: auto
+
+	&__price
+		font-weight: 700
+		font-size: 20px
+		color: #666
+
+	&__sale-price
+		text-decoration: line-through
+		color: $gray-light
+		margin-left: 15px

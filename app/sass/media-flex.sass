@@ -1,0 +1,150 @@
+.home .header, .header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	padding: 10px 0
+	background-color: #fff
+	box-shadow: 0 0 10px rgba(#000, 0.2)
+
+.header-wrapp
+	flex-direction: row
+	justify-content: flex-start
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px)
+	//
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)
+	//
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px)
+	//
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px)
+	//
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px)
+	.slider__content
+		h2
+			font-size: 25px
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px)
+	.slider__content
+		h2
+			font-size: 28px
+
+	.nav-toggle
+		display: block
+
+	.nav
+		position: fixed
+		top: 52px
+		left: 0
+		width: 250px
+		height: 100%
+		background-color: #fff
+		overflow-y: auto
+		overflow-x: hidden
+		background-color: #f5f5f5
+		transform: translateX(-100%)
+		+transition
+		&.open
+			transform: translateX(0)
+	.nav__list
+		flex-direction: column
+		padding: 30px 15px 15px
+
+	.nav__item
+		position: relative
+		margin-right: 0
+		margin-bottom: 10px
+		.caret
+			position: absolute
+			top: 4px
+			right: 0
+			display: block
+		.caret__icon
+			width: 18px
+			height: 13px
+		&.active
+			.nav__link::after
+				display: none
+
+	.home .nav__link
+		color: $main-color
+
+	.nav__link
+		padding: 0
+		font-size: 16px
+		color: $main-color
+		text-transform: none
+		&::after
+			content: ''
+			border: none
+
+	.dropdown-megamenu:hover .dropdown-menu, .dropdown:hover .dropdown-menu
+		display: none
+
+	.dropdown-megamenu
+		&.open
+			.dropdown-menu
+				position: static
+				display: block
+				width: auto
+				background: none
+				animation: none
+				& > li
+					display: block
+					width: auto
+					padding: 20px 15px 0
+					color: $accent
+					& > a
+						text-transform: none
+					& > ul
+						padding: 10px 10px 0
+						& > li
+							padding: 0
+							margin-bottom: 10px
+
+	.dropdown
+		&.open
+			.dropdown-menu
+				position: static
+				display: block
+				padding: 10px 10px 0 30px
+				background: transparent
+				animation: none
+				& > li
+					margin-bottom: 10px
+					& > a
+						padding: 0
+
+	.header-search
+		position: static
+		margin: 0
+
+	.header-search__btn .header-search__icon
+		fill: $main-color
+
+	.search-wrapp__close
+		right: 15px
+		top: 15px
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px)
+	//
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px)
+	//
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

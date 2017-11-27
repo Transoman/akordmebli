@@ -1,0 +1,30 @@
+.gallery
+	margin-bottom: 110px
+	&-item
+		width: 33.33%
+		&:hover
+			.gallery-icon a::before
+				opacity: 1
+				visibility: visible
+			.gallery-icon img
+				transform: scale(1.1)
+	&-icon
+		overflow: hidden
+		a
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				background-color: rgba(#000, .5)
+				opacity: 0
+				visibility: hidden
+				+transition
+				z-index: 2
+		img
+			position: relative
+			transform: scale(1)
+			+transition

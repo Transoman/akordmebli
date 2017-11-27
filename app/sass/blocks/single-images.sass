@@ -1,0 +1,29 @@
+.images-slider
+	margin-bottom: 25px
+
+
+.single-images-thumbnails
+	margin: 0
+	padding: 0 35px
+	list-style-type: none
+
+	&__item
+		margin-right: 23px
+		&:last-child
+			margin-right: 0
+
+	&__icon
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		fill: $gray
+		width: 20px
+		height: 20px
+		cursor: pointer
+		+transition
+		&:hover
+			fill: $main-color
+		&--prev
+			left: 0
+		&--next
+			right: 0

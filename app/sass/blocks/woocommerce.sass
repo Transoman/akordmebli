@@ -1,0 +1,89 @@
+.screen-reader-text
+	clip: rect(1px,1px,1px,1px)
+	position: absolute!important
+	height: 1px
+	width: 1px
+	overflow: hidden
+
+// Pagination
+.woocommerce-pagination
+	flex: 1 1 100%
+	margin-top: 50px
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		display: flex
+		li
+			margin-right: 10px
+			.current
+				display: block
+				width: 45px
+				height: 45px
+				font-family: $second-font
+				font-size: 18px
+				font-weight: 100
+				line-height: 45px
+				color: #fff
+				text-align: center
+				background-color: $accent
+			a
+				display: block
+				width: 45px
+				height: 45px
+				font-family: $second-font
+				font-size: 18px
+				font-weight: 100
+				line-height: 45px
+				color: $main-color
+				text-align: center
+				background-color: $gray-lighten
+				+transition
+				&:hover
+					background-color: $accent
+					color: #fff
+			.next
+				.woocommerce-pagination__icon
+					transform: rotate(-90deg)
+			.prev
+				.woocommerce-pagination__icon
+					transform: rotate(90deg)
+			.next, .prev
+				&:hover
+					.woocommerce-pagination__icon
+						fill: #fff
+	&__icon
+		width: 15px
+		height: 14px
+		fill: $main-color
+		+transition
+
+// Search
+.woocommerce-product-search,
+.search-form
+	position: relative
+	.search-field
+		width: 100%
+	input[type="submit"]
+		position: absolute
+		top: 0
+		right: 0
+		border: 0
+		outline: none
+		background-color: $accent
+		color: #fff
+		height: 100%
+		padding: 0 15px
+		+transition
+		&:hover
+			background-color: lighten($accent, 5%)
+		&:active
+			background-color: darken($accent, 5%)
+
+
+.woocommerce-info
+	margin-top: 0
+	padding: 15px
+	background-color: #E3F2FD
+	border: 1px solid #BBDEFB
+	// font-size: 15px

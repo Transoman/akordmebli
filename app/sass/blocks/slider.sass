@@ -1,0 +1,85 @@
+.slider
+
+	&__item
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		min-height: 700px
+		height: 100vh
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 50%
+		text-align: center
+		color: #fff
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background-color: rgba(#000, .3)
+			z-index: 1
+
+	&__content
+		position: relative
+		z-index: 2
+
+	h2
+		margin: 0
+		margin-bottom: 30px
+		font-size: 38px
+		font-weight: 700
+		line-height: 1.4
+		text-transform: uppercase
+
+	p
+		margin: 0
+		margin-bottom: 40px
+		font-size: 18px
+
+	&__btn
+		padding: 10px 35px
+		background: transparent
+		border: 2px solid #fff
+		font-size: 14px
+		outline: none
+		&:hover
+			background-color: #fff
+			color: $main-color
+		&:focus
+			background-color: #fff
+			color: $main-color
+
+.slider-dots
+	position: absolute
+	top: 50%
+	right: 5%
+	transform: translateY(-50%)
+	display: flex
+	flex-direction: column
+	&__item
+		width: 12px
+		height: 12px
+		margin-bottom: 20px
+		border: 2px solid  #fff
+		border-radius: 50%
+		cursor: pointer
+		+transition
+		&:last-child
+			margin-bottom: 0
+		&:hover
+			border-color: $accent
+		&.active
+			background-color: $accent
+			border-color: $accent
+
+
+.owl-item.active
+	h2
+		animation: fadeInDown 1s ease
+	p
+		animation: fadeIn 1.5s ease
+	a
+		animation: fadeInUp 1s ease
